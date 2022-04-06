@@ -1,14 +1,20 @@
 export {};
-const name = "KSH";
+// 인터페이스는 JS에는 없고 JS에도 영향을 미치지 않음
+interface Human {
+  name: string;
+  age: number;
+  gender: string;
+}
 
-const sayHi = (name: string): void => {
-  console.log("HI!", name);
+const person = {
+  name: "KSH",
+  age: 90,
+  gender: "male",
 };
 
-sayHi(name);
-// 인수들 뒤에 함수의 리턴 형식을 지정해줄 수 있다. (void는 아무것도 리턴 X)
+const sayHi = (person: Human): void => {
+  console.log("HI!", person.name);
+};
 
-/* 
-sayHi(99);
-'number' 형식의 인수는 'string' 형식의 매개 변수에 할당될 수 없습니다.
-*/
+sayHi(person);
+// 인수로 객체를 넘겨주고 인수로 받는 객체 속 요소들의 타입을 지정한 인터페이스를 통해 타입 체크 가능
