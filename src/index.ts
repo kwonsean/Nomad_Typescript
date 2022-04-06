@@ -1,14 +1,14 @@
 export {};
 const name = "KSH";
 
-const sayHi = (name?) => {
+const sayHi = (name: string): void => {
   console.log("HI!", name);
 };
 
 sayHi(name);
-/*
-sayHi();
-1개의 인수가 필요한데 0개를 가져왔습니다.
- */
+// 인수들 뒤에 함수의 리턴 형식을 지정해줄 수 있다. (void는 아무것도 리턴 X)
 
-sayHi(); // ?를 붙이면 값을 안넣어줘도 오류가 발생하지 않음
+/* 
+sayHi(99);
+'number' 형식의 인수는 'string' 형식의 매개 변수에 할당될 수 없습니다.
+*/
