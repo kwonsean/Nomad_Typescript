@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [],
-  controllers: [AppController],
+  controllers: [AppController], // url을 가져오고 함수를 실행시키는 역할
   providers: [AppService],
 })
 export class AppModule {}
